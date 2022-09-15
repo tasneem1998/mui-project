@@ -23,11 +23,11 @@ const sidebar_data = [
     { icon: <PersonIcon />, label: "Friends" },
     { icon: <SettingsIcon />, label: "Settings" },
     { icon: <AccountBoxIcon />, label: "Profile" },
-    { icon: <DarkModeIcon />, label: <Switch/> },
+    { icon: <DarkModeIcon />, label: <Switch /> },
 ]
 const Sidebar = () => {
 
-    const [selectedIndex, setSelectedIndex] = React.useState(1);
+    const [selectedIndex, setSelectedIndex] = React.useState(0);
 
     const handleListItemClick = (event, index) => {
         setSelectedIndex(index);
@@ -38,23 +38,26 @@ const Sidebar = () => {
             p={2}
             flex={1}
             sx={{ display: { xs: "none", sm: "block" } }}
+            position="relative"
         >
-            <List component="nav">
-                {sidebar_data.map((item, index) => (
-                    <ListItem disablePadding>
-                        <ListItemButton
-                            selected={selectedIndex === index}
-                            onClick={(event) => handleListItemClick(event, index)}
-                            component="a"
-                        >
-                            <ListItemIcon>
-                                {item.icon}
-                            </ListItemIcon>
-                            <ListItemText primary={item.label} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
+            <Box position="fixed" sx={{width: 1/7 }}> {/* 1+4+2=7 => flex */}
+                <List component="nav">
+                    {sidebar_data.map((item, index) => (
+                        <ListItem disablePadding key={index}>
+                            <ListItemButton
+                                selected={selectedIndex === index}
+                                onClick={(event) => handleListItemClick(event, index)}
+                                // component="a"
+                            >
+                                <ListItemIcon>
+                                    {item.icon}
+                                </ListItemIcon>
+                                <ListItemText primary={item.label} />
+                            </ListItemButton>
+                        </ListItem>
+                    ))}
+                </List>
+            </Box>
         </Box>
     )
 }

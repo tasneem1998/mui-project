@@ -12,7 +12,7 @@ function App() {
     <Box>
       <CssBaseline />
       <Navbar />
-      <Stack direction="row" spacing={2} justifyContent="space-between">
+      <Stack direction="row" spacing={{xs: 0, sm: 2}} justifyContent="space-between">
         <Sidebar />
         <Feed />
         <Rightbar />
