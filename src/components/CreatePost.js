@@ -24,7 +24,7 @@ const modalStyle = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: 350,
     bgcolor: 'background.paper',
     padding: "16px 32px 24px"
 };
@@ -43,8 +43,8 @@ const CreatePost = () => {
     return (
         <Box sx={{
             position: "fixed",
-            left: { xs: '50%', md: "33px" },
-            bottom: { xs: "33px", md: "none" },
+            left: { xs: '50%', md: "32px" },
+            bottom: { xs: "16px", md: "none" },
             transform: { xs: 'translate(-50%, -50%)', md: "none" }
         }}>
             <Tooltip title="Add Post" placement='right' arrow>
