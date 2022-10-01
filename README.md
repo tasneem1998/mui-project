@@ -16,3 +16,12 @@ after successfully app created can run below command
 ## # mui installations
 - `npm install @mui/material @emotion/react @emotion/styled`
 - `npm install @mui/icons-material`
+
+## # Deployment
+- `npm install gh-pages --save-dev`
+
+changes in package.json
+
+- "homepage": "http://tasneem1998.github.io/mui-project"
+- "predeploye": "npm run build",
+    "deploye": "gh-pages -d build"
