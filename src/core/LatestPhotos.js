@@ -5,8 +5,8 @@ import ImageListItem from '@mui/material/ImageListItem';
 const LatestPhotos = () => {
     return (
         <ImageList sx={{ maxWidth: "100%", height: 320 }} cols={3} rowHeight={160}>
-            {itemData.map((item) => (
-                <ImageListItem key={item.img}>
+            {itemData.map((item, index) => (
+                <ImageListItem key={index}>
                     <img
                         src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
                         srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}

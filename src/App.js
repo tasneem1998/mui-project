@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Rightbar from "./components/Rightbar";
 import Sidebar from "./components/Sidebar";
 import Stack from "@mui/material/Stack";
+import CreatePost from './components/CreatePost';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Feed />
         <Rightbar />
       </Stack>
+      <CreatePost/>
     </Box>
   );
 }

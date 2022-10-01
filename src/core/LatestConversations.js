@@ -10,11 +10,11 @@ import Typography from '@mui/material/Typography';
 const LatestConversations = () => {
     return (
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-            {data.map((item, idx) => (
+            {data.map((item, index) => (
                 <>
-                    <ListItem alignItems="flex-start" key={idx}>
+                    <ListItem alignItems="flex-start" key={index}>
                         <ListItemAvatar>
-                            <Avatar alt={item.secondary} src={`https://i.pravatar.cc/150?img=${idx}`} />
+                            <Avatar alt={item.secondary} src={`https://i.pravatar.cc/150?img=${index}`} />
                         </ListItemAvatar>
                         <ListItemText
                             primary={item.primary}
