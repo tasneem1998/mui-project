@@ -17,6 +17,7 @@ import ImageIcon from '@mui/icons-material/Image';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import EventIcon from '@mui/icons-material/Event';
 import { styled } from '@mui/material';
+import userPic from "../profile.jpg"
 
 const modalStyle = {
     position: 'absolute',
@@ -25,7 +26,7 @@ const modalStyle = {
     transform: 'translate(-50%, -50%)',
     width: 400,
     bgcolor: 'background.paper',
-    p: 4,
+    padding: "16px 32px 24px"
 };
 
 const UserBox = styled(Box)({
@@ -56,11 +57,11 @@ const CreatePost = () => {
                 onClose={handleClose}
             >
                 <Box sx={modalStyle}>
-                    <Typography variant="h6" color="gray" textAlign="center">
+                    <Typography variant="h6" color="gray" textAlign="center" mb={2}>
                         Create Post
                     </Typography>
                     <UserBox>
-                        <Avatar alt="Remy Sharp" src="https://i.pravatar.cc/150?img=4" />
+                        <Avatar alt="Remy Sharp" src={userPic} />
                         <Typography variant="span" fontWeight="500"> Code Lover</Typography>
                     </UserBox>
                     <Box mb={2}>

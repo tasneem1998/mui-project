@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import DeviceHubIcon from '@mui/icons-material/DeviceHub';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import Pic from "../profile.jpg"
+import userPic from "../profile.jpg"
 import React from 'react';
 import Searchbar from "../core/Searchbar"
 import Toolbar from '@mui/material/Toolbar';
@@ -76,10 +76,10 @@ const Navbar = () => {
                     <Badge badgeContent={2} color="error">
                         <NotificationsIcon color="white" />
                     </Badge>
-                    <Avatar src={Pic} sx={{ width: 35, height: 35 }} />
+                    <Avatar src={userPic} sx={{ width: 35, height: 35 }} />
                 </Icons>
                 <User onClick={handleOpenSetting}>
-                    <Avatar src={Pic} sx={{ width: 35, height: 35 }} />
+                    <Avatar src={userPic} sx={{ width: 35, height: 35 }} />
                 </User>
                 <AccountSetting open={openSetting} handleClose={handleCloseSetting} />
             </StyledToolbar>

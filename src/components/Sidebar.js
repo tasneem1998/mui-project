@@ -23,10 +23,11 @@ const sidebar_data = [
     { icon: <PersonIcon />, label: "Friends" },
     { icon: <SettingsIcon />, label: "Settings" },
     { icon: <AccountBoxIcon />, label: "Profile" },
-    { icon: <DarkModeIcon />, label: <Switch /> },
+    // { icon: <DarkModeIcon />, label: <Switch /> },
 ]
-const Sidebar = () => {
+const Sidebar = (props) => {
 
+    const {mode, setMode} = props;
     const [selectedIndex, setSelectedIndex] = React.useState(0);
 
     const handleListItemClick = (event, index) => {
@@ -56,6 +57,17 @@ const Sidebar = () => {
                             </ListItemButton>
                         </ListItem>
                     ))}
+                    <ListItem disablePadding>
+                            <ListItemButton
+                                selected={selectedIndex === 7}
+                                onClick={(event) => handleListItemClick(event, 7)}
+                            >
+                                <ListItemIcon>
+                                    {<DarkModeIcon />}
+                                </ListItemIcon>
+                                <ListItemText primary={<Switch onChange={()=>setMode(mode === "light" ? "dark" : "light")}/>} />
+                            </ListItemButton>
+                        </ListItem>
                 </List>
             </Box>
         </Box>
