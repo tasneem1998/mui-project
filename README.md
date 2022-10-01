@@ -23,5 +23,5 @@ after successfully app created can run below command
 changes in package.json
 
 - "homepage": "http://tasneem1998.github.io/mui-project"
-- "predeploye": "npm run build",
-    "deploye": "gh-pages -d build"
+- "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
